@@ -1,0 +1,33 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula02</title>
+        <!--LINK DO JQUERY-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        //Utilizando JQuery
+            $(document).ready(function(){
+                $("a").click(function(){
+                    /*
+                    $("#titulo").css("color","#0000FF");
+                    $("#titulo").text("Curso de JQuery");
+                    $("#titulo").hide();
+                    $("#titulo").fadeToggle();*/
+                    //Encadeamento abaixo
+                    $("#titulo").css("color","#0000FF").text("Curso de JQuery").hide().fadeToggle();
+                });
+            });
+            //Utilizando JavaScript
+            window.onload =function(){
+                document.getElementsByTagName("a")[0].onclick = alterarTitulo;
+            }
+            function alterarTitulo(){
+                document.getElementById('titulo').style.color='#0000FF'
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="titulo">Hello World!</h1>
+        <a href="#">Executar JavaScript</a>
+    </body>
+</html>

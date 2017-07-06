@@ -1,0 +1,26 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula01</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        //Utilizando JQuery
+            $(document).ready(function(){
+                $("a").click(function(){
+                    $("#titulo").css("color","#0000FF");
+                });
+            });
+            //Utilizando JavaScript
+            window.onload =function(){
+                document.getElementsByTagName("a")[0].onclick = alterarTitulo;
+            }
+            function alterarTitulo(){
+                document.getElementById('titulo').style.color='#0000FF'
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="titulo">Hello World!</h1>
+        <a href="#">Executar JavaScript</a>
+    </body>
+</html>
