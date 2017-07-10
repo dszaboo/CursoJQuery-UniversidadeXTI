@@ -1,0 +1,56 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula18</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/_javascript/aula18.js"></script>
+    </head>
+    <style type="text/css">
+        div#msg{
+            font-size: 30pt;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 20;
+            background-color: #decfcf;
+            color: #000;
+            border: 2pt dashed #000;
+            margin: 6pt 0 10pt 0;
+            font-weight: bold;
+        }
+        fieldset{
+            display: block;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 20;
+            background-color: #696969;
+            margin: 6pt 0 0 0;
+        }
+    </style>
+    <body>
+        <div id="msg">Mensagem</div>
+        <form>
+            <fieldset>
+                <legend>Formulário</legend>
+                <div>
+                    <label for="text">Text:</label>
+                    <input type="text" name="text"/>
+                </div>  
+                <div>
+                    <label for="text">Select:</label>
+                    <select name="tPais" id="cPais">
+                            <option>Alemanha</option>
+                            <option>Agentina</option>
+                            <option>Brasil</option>
+                            <option>Cuba</option>
+                            <option>Italia</option>
+                            <option>Venezuela</option>
+                    </select>
+                </div>
+                <div>
+                    <p><label for="text">Text Area:</label></p>
+                    <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Escreva aqui..."></textarea>
+                </div>
+                <button type="button">Submit</button>
+            </fieldset>
+
+        </form>
+    </body>
+</html>
