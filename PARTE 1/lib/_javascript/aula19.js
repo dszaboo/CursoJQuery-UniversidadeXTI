@@ -9,6 +9,7 @@ $(document).ready(function(){
         $("div#msg").show("slow");//normal,fast,slow
     });
 
+    //Funcão Show = alterna entre mostar e esconder
     $("button#toggle").click(function(){
         $("div#msg").toggle("slow");
     });
