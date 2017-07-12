@@ -1,9 +1,5 @@
 
 $(document).ready(function(){
-        //Efeito Zebra na tabela
-    //Só as linhas impares.
-    $("#tabelaFilmes tbody tr:odd").addClass("impar");
-
     $("#tabelaFilmes thead tr th").each(function(i){
         var n = i + 1;
         var nomeColuna = $(this).text();
@@ -36,5 +32,19 @@ $(document).ready(function(){
             });
 
         });
+
+        //Ocultar e exibir linhas da tabela
+    $("tbody tr:not(.sub)").hide();
+    $(".sub th").prepend("<img class='maisMenos' src='lib/_imagens/mais.png'/>");
+    $(".maisMenos").css("cursor","pointer");//Trocar o cursor do mouse para click
+    $("img").click(function(){
+        debugger;
+        if($(this).attr("scr") == "lib/_imagens/menos.png"){
+            $(this).attr("scr","lib/_imagens/mais.png").parents().siblings("tr").hide();
+        }
+        else{
+            $(this).attr("scr","lib/_imagens/menos.png").parents().siblings("tr").show();
+        }
+    });
 
 });
