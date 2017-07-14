@@ -1,0 +1,35 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula38</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <style>
+            p{
+                font-size: 15pt;
+                border: 2px solid black;
+                width: 150px;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#drag").draggable();
+                $("#drop").droppable({
+                    drop: function(event, ui){
+                        $(this).addClass("ui-state-highlight")
+                        .find("p").html("Colocado !!!");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="drag">
+            <p>Leve-me para o Alvo</p>
+        </div>   
+        <div id="drop">
+            <p>Coloque aqui o elemento arrastável</p>
+        </div>                     
+    </body>
+</html>

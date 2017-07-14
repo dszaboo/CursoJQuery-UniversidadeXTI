@@ -1,0 +1,34 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula35</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <style>
+            label{
+                font-size: 20pt;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("a").button({
+                    icons: {primary: "ui-icon-lightbulb"},
+                    text: false
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a href="#">Botão A</a><br/>
+        <div id="checks">
+            <input type="checkbox" id="checkbox1"/><label>S</label>
+            <input type="checkbox" id="checkbox2"/><label>M</label>
+            <input type="checkbox" id="checkbox3"/><label>N</label>
+        </div>
+        <div id="radios">
+            <input type="radio" id="radio1" value="EF"/><label>Efetivo</label>
+            <input type="radio" id="radio2"value"ES"/><label>Estagiário</label>
+        </div>
+    </body>
+</html>

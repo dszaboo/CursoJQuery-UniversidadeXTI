@@ -1,0 +1,66 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula37</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <style>
+            p{
+                font-size: 15pt;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#dialog").dialog({
+                    height:140,
+                    modal:true,
+                    buttons:{
+                        "Deletar todos":function(){
+                            $(this).dialog("close");
+                        },
+                        Cancel: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="demo">
+            <div id="dialog" title="Dialog Modal">
+                <p>Adicionar uma janela modal faz com auqe a caixa de diálogo seja bem mais enfática
+                    porque ela salta ao conteudo da página.</p>
+            </div>
+            <h3><a href="#">Section 1</a></h3>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, 
+                    purus lectus malesuada libero, sit amet commodo magna eros quis urna. 
+                    Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+            <h3><a href="#">Section 2</a></h3>
+            <div>
+                <p>Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor.
+                     Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae,
+                      pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend.</p>
+            </div>
+            <h3><a href="#">Section 3</a></h3>
+            <div>
+                <p>Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna.
+                     Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod,
+                      purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus
+                       consequat consequat.</p>
+            </div>
+            <h3><a href="#">Section 4</a></h3>
+            <div>
+                <p>Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna.
+                     Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod,
+                      purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat
+                       consequat.</p>
+            </div>
+        </div>                    
+    </body>
+</html>

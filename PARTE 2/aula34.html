@@ -1,0 +1,42 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula34</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/> 
+
+        <script type="text/javascript">
+            $(function(){
+                $("#city").autocomplete({
+                    source: function(request, response){
+                        $.ajax({
+                            url:"Http://ws.geonames.org/searchJSON",
+                            dataType:"jsonp",
+                            data:{
+                                featureClass:"P",
+                                style:"full",
+                                maxRows:12,
+                                username:bryan,
+                                name_startsWith: request.term
+                            },
+                            success: function(data){
+                               response($.map( data.geonames, function(item){
+                                    return {
+                                        label:item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,
+                                        value:item.name
+                                    }
+                               }));
+                            }
+                        });
+                    },
+                    minLength = 2
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" autocomplete="on">
+    </body>
+</html>

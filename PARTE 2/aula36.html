@@ -1,0 +1,26 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula36</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <style>
+            p{
+                font-size: 20pt;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#date").datepicker({
+                    showOn: "button",
+                    buttonImagem: "lib/_imagens/calendar-.png",
+                    buttonImageOnly: true
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>Date: <input type="text" id="date"></p>
+    </body>
+</html>

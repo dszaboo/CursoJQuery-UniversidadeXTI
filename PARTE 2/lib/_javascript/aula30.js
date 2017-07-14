@@ -1,15 +1,16 @@
 
 $(document).ready(function(){
-        //Delimitador
-    $("textarea").bind("input keyup paste",function(){
-        var maximo = 100;
-        var disponivel = maximo -  $(this).val().length;
-        if(disponivel <0){
-            var texto = $(this).val().substr(0,maximo);
-            $(this).val(texto);
-            disponivel = 0;
+    //Restringir Caracteres
+    $(".numeros").bind("keydown",function(event){
+        var keyCode = event.which;//Pega todo caracter assim que digitado.
+        var isStandard = (keyCode > 47 && keyCode < 58);
+        var isOther = (",8,46,37,38,39,40,".indexOf("," + keyCode + ",")> -1);
+        if(isStandard || isOther){
+            return true;
         }
-        $(".contagem").text("Caracteres Restantes:" + disponivel);
+        else{
+            return false;
+        }
     });
 
 });
