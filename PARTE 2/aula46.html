@@ -1,0 +1,35 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula46</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <script type="text/javascript" src="lib\_javascript\plugins\jquery.validate.min.js"></script>
+        <style>
+            fieldset{
+                font-size: 18pt;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#formulario").validade();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="formulario">
+            <fieldset>
+                <div>
+                    <label for="nome">Nome:</label><br/>
+                    <input type="text" name="nome" class="required"/>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label><br/>
+                    <input type="text" name="email" class="required"/>
+                </div>
+                <input type="submit" value = "Gravar"/>
+            </fieldset>
+        </div>
+    </body>
+</html>

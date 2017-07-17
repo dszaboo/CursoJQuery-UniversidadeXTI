@@ -1,0 +1,45 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula45</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <style>
+            #sortable{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            #sortable li{
+                font-size: 30pt;
+                text-align: center;
+                float: left;
+                margin: 3px 3px 3px 0;
+                padding: 1px;
+                width: 50px;
+                height: 50
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#sortable").sortable();
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="sortable">
+            <li class="ui-state-default">1</li>
+            <li class="ui-state-default">2</li>
+            <li class="ui-state-default">3</li>
+            <li class="ui-state-default">4</li>
+            <li class="ui-state-default">6</li>
+            <li class="ui-state-default">7</li>
+            <li class="ui-state-default">8</li>
+            <li class="ui-state-default">9</li>
+            <li class="ui-state-default">10</li>
+            <li class="ui-state-default">11</li>
+            <li class="ui-state-default">12</li>
+        </ul>
+    </body>
+</html>

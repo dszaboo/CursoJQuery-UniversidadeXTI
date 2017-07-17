@@ -1,20 +1,29 @@
 <!<!DOCTYPE html>
 <html>
     <head>
-        <title>JQuery Aula40</title>
+        <title>JQuery Aula43</title>
         <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
          <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
         <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
-
+        <style>
+            #slider{margin: 50px;}
+        </style>
         <script type="text/javascript">
             $(function(){
-                $("#progressbar").progressbar({
-                    value:33
+                $("#slider").slider({
+                    min:10,
+                    max:100,
+                    value: 50,
+                    orientation:"vertical",
+                    slide: function(event, ui){
+                        $("#valor").val(ui.value)
+                    }
                 });
             });
         </script>
     </head>
     <body>
-        <div id="progressbar"></div>
+        <div id="slider"></div>
+        Valor: <input type="text" id="valor"/>
     </body>
 </html>

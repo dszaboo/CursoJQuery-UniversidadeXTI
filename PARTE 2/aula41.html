@@ -1,0 +1,38 @@
+<!<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Aula41</title>
+        <script type="text/javascript" src="lib\_javascript\jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib\_javascript\jquery-ui-1.12.1.custom\jquery-ui.min.css"/>
+        <style>
+            textarea {
+                width: 150px;
+                height: 150px;
+                padding: 0.5em;
+            }
+            #resizable {
+                width: 300px;
+                height: 300px;
+                padding: 0.5em;
+            }
+            #resizable h3{
+                text-align: center;
+                margin:0;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#resizable").resizable();
+                $("#resizable2").resizable();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="resizable" class="ui-widget-content">
+            <h3 class="ui-widget-header">Resizable</h3>
+            <textarea rows="5" cols="2"></textarea>            
+        </div>
+
+    </body>
+</html>
